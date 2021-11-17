@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 class TwoSumII{
     public int[] twoSum(int[] numbers, int target) {
         int a = 0, b = numbers.length-1;

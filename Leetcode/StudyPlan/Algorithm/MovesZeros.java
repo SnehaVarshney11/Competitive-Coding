@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 class MovesZeros{
     public void moveZeroes(int[] nums) {
         int start = 0, end = 0;

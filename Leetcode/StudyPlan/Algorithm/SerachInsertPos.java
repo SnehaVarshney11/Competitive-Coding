@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 public class SerachInsertPos {
     public int searchInsert(int[] nums, int target) {
         int n = nums.length;

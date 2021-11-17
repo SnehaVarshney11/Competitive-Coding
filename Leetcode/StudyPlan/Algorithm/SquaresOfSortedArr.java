@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 public class SquaresOfSortedArr {
     class Solution {
         public int[] sortedSquares(int[] nums) {

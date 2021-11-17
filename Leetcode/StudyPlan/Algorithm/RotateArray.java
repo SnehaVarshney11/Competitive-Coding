@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 public class RotateArray {
     public void rotate(int[] nums, int k) {
         k %= nums.length;

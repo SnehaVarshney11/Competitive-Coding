@@ -1,3 +1,5 @@
+package StudyPlan.Algorithm;
+
 public class ReverseString {
     public void reverseString(char[] s) {
         for(int i=0; i<s.length/2; i++){    //Do it half the number of String length
