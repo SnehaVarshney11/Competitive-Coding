@@ -1,7 +1,11 @@
 package NovDailyQues;
 
+class Node{
+    Node left, right;
+    int val;
+}
 class DeleteNodeInBST {
-    public TreeNode deleteNode(TreeNode root, int key) {
+    public Node deleteNode(Node root, int key) {
         //Base Cond.
         if(root == null)
             return root;
@@ -21,7 +25,7 @@ class DeleteNodeInBST {
             else if(root.right==null){
                 return root.left;
             }else{
-                TreeNode min = root.right;
+                Node min = root.right;
                 while(min.left != null){
                     min = min.left;
                 }
