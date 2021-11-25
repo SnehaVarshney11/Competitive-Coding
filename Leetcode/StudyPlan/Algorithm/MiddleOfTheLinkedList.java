@@ -1,15 +1,12 @@
 package StudyPlan.Algorithm;
 
-class ListNode{
-    public ListNode(int i) {
+class MiddleOfTheLinkedList {
+    class ListNode2{
+        ListNode2 next;
     }
-
-    ListNode next; 
-}
-public class MiddleOfTheLinkedList {
-    public ListNode middleNode(ListNode head) {
-        ListNode a = head;
-        ListNode b = head;
+    public ListNode2 middleNode(ListNode2 head) {
+        ListNode2 a = head;
+        ListNode2 b = head;
         while(b!=null && b.next!=null){
             a = a.next;
             b = b.next.next;
