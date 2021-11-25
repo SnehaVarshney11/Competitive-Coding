@@ -1,12 +1,15 @@
 package StudyPlan.Algorithm;
 
 public class RemoveNthNodeFromEndOfList {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
+    class ListNode3{
+        ListNode3 next;
+    }
+    public ListNode3 removeNthFromEnd(ListNode3 head, int n) {
+        ListNode3 dummy = new ListNode3();
         dummy.next = head;
         
-        ListNode p = dummy;
-        ListNode f = dummy;
+        ListNode3 p = dummy;
+        ListNode3 f = dummy;
         int counter = 1;
         while(counter<=n+1){
             f = f.next;
