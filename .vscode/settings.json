@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Leetcode",
-        "codechef"
+        "codechef",
+        "."
     ]
 }
