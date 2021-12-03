@@ -24,7 +24,7 @@ class SortAnArray {
         }
         //update the array
         i = 0;
-        while(count1 > 0){
+        while(count0 > 0){
             ar[i++] = 0;
             count0--;
         }
