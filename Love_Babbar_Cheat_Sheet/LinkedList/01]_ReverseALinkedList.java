@@ -14,7 +14,8 @@ class ReverseALinkedList {
     // Function to reverse Linked List
     Node reverse(Node node){
         Node prev = null;
-        Node curr = node;
+        Node curr = node; 
+        
         Node next = null;
         while(curr != null){
             next = curr.next;
