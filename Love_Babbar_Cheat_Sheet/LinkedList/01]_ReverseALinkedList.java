@@ -12,10 +12,10 @@ class ReverseALinkedList {
         }
     }    
     // Function to reverse Linked List
+    // Iterative Method
     Node reverse(Node node){
         Node prev = null;
         Node curr = node; 
-        
         Node next = null;
         while(curr != null){
             next = curr.next;
@@ -34,6 +34,38 @@ class ReverseALinkedList {
             node = node.next;
         }
     }
+
+    //Recursive Method
+    static Node rNode(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node rest = rNode(head.next);
+        head.next.next = head;
+
+        head.next = null;
+
+        return rest;
+    }
+    /* Function to print linked list */
+    static void print()
+    {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+ 
+    static void push(int data)
+    {
+        Node temp = new Node(data);
+        temp.next = head;
+        head = temp;
+    }
+
+    
     // Driver Code
     public static void main(String[] args)
     {
@@ -49,5 +81,21 @@ class ReverseALinkedList {
         System.out.println("");
         System.out.println("Reversed linked list ");
         list.printList(head);
+
+        // Recursive 
+        /* Start with the empty list */
+        
+        push(20);
+        push(4);
+        push(15);
+        push(85);
+        
+        System.out.println("Given linked list");
+        print();
+        
+        head = rNode(head);
+        
+        System.out.println("Reversed Linked list");
+        print();
     }
-}
+}   
