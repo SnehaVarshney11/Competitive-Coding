@@ -3,6 +3,7 @@ import java.util.Scanner;
 class Check_Mate{
     public static void main(String[] args) throws java.lang.Exception{
         Scanner sc = new Scanner(System.in);
+        sc.close();
         int t = sc.nextInt();
         while(t-->0){
             int xk = sc.nextInt();
