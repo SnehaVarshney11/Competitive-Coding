@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class A_Word{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-		sc.close();
-		String s = sc.next();
-		String sl = s.toLowerCase();
-		String su = s.toUpperCase();
+        sc.close();
+		String s=sc.next();
+		String sl=s.toLowerCase();
+		String su=s.toUpperCase();
 		int l=0;
 		for(int i=0;i<s.length();i++)
 		{
