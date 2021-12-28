@@ -16,6 +16,7 @@ public class A_Wrong_Subtraction{
                 n -= 1;
             }
         }
+        
         System.out.println(n);
     }
 }
