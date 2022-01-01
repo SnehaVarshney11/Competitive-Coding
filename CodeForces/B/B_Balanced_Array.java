@@ -7,7 +7,7 @@ public class B_Balanced_Array{
         sc.close();
         int t = sc.nextInt();
         while(t-->0){
-            int sum1 = 0,sum2 = 0,d;
+            int sum1 = 0,sum2 = 0;
             int n = sc.nextInt();
 
             if(n % 4 != 0){
