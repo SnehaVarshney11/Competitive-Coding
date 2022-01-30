@@ -20,16 +20,36 @@ class LevelOrderTraversal {
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(node);
 
-        while(queue.size() > 0){
-            Node top = queue.remove();
-            System.out.print(top.data + " ");
+        // In a Single Line
+        // while(queue.size() > 0){
+        //     Node top = queue.remove();
+        //     System.out.print(top.data + " ");
 
-            if(top.left != null){
-                queue.add(top.left);
+        //     if(top.left != null){
+        //         queue.add(top.left);
+        //     }
+        //     if(top.right != null){
+        //         queue.add(top.right);
+        //     }
+        // }
+
+        // In Line By Line
+        while(true){
+            int count = queue.size();
+            if(count == 0) break;
+            while(count > 0){
+                Node top = queue.remove();
+                System.out.print(top.data + " ");
+
+                if(top.left != null){
+                    queue.add(top.left);
+                }
+                if(top.right != null){
+                    queue.add(top.right);
+                }
+                count--;
             }
-            if(top.right != null){
-                queue.add(top.right);
-            }
+            System.out.println();
         }
     }
     public static void main(String[] args) {
