@@ -1,3 +1,4 @@
+package Practice;
 import java.util.Scanner;
 class Sleepy_Chef{
     public static void main(String[] args) throws java.lang.Exception{

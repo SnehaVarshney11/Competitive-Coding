@@ -1,3 +1,4 @@
+package Practice;
 import java.util.Scanner;
 
 class Equinox_Strings{
