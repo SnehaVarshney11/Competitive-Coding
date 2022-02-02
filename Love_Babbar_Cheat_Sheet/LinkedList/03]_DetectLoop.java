@@ -1,5 +1,8 @@
 package Love_Babbar_Cheat_Sheet.LinkedList;
 
+class Node{
+    Node next;
+}
 class DetectLoop {
     public static boolean detectLoop(Node head){
         // Add code here
