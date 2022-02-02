@@ -5,7 +5,6 @@ class Node{
 }
 class DetectLoop {
     public static boolean detectLoop(Node head){
-        // Add code here
         if(head == null) return false;
         
         Node slow = head;
