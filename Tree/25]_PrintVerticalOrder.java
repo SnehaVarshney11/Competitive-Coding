@@ -45,14 +45,6 @@ class PrintVerticalOrder {
         getVerticalOrder(node.left, hd - 1, m);
         getVerticalOrder(node.right, hd + 1, m);
     }
-    
-    public Node createNewNode(int val) {
-      Node newNode = new Node();
-      newNode.data = val;
-      newNode.left = null;
-      newNode.right = null;
-      return newNode;
-    }
     public static void main(String[] args) {
         PrintVerticalOrder a = new PrintVerticalOrder();
     
