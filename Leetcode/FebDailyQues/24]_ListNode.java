@@ -3,7 +3,7 @@ package FebDailyQues;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
     ListNode() {}
