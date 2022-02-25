@@ -3,6 +3,7 @@ import java.util.Scanner;
 class Too_many_items{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        sc.close();
         int t = sc.nextInt();
         while(t-->0){
             int n = sc.nextInt();
