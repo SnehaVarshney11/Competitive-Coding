@@ -13,7 +13,7 @@ class ListNode {
 class SortList {
     public ListNode sortList(ListNode head) {
         ListNode Fake = new ListNode(-1);
-    ArrayList<Integer> list = new ArrayList();
+    ArrayList<Integer> list = new ArrayList<>();
     ListNode temp = head;
     while(temp!=null){
         list.add(temp.val); 
