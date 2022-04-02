@@ -7,5 +7,6 @@ class Email_Reminders{
         int n = sc.nextInt();
         int u = sc.nextInt();
         System.out.println(n-u);
+        sc.close();
     }
 }
