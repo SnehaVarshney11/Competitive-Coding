@@ -14,5 +14,6 @@ class Important_Pages_on_CodeChef{
         }else{
             System.out.println("https://www.codechef.com/contests");
         }
+        sc.close();
     }
 }
