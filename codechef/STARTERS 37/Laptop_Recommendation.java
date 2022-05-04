@@ -1,0 +1,253 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+
+// solution --> @varsneha
+
+class Laptop_Recommendation{
+    public static void main(String[] args) throws Exception {
+        InputReader sc = new InputReader(System.in);
+        OutputWriter out = new OutputWriter(System.out);
+        Solution Solver = new Solution();
+
+        int testNumber = sc.nextInt();
+        for (int i = 1; i <= testNumber; i++) {
+            Solver.solveTestcase(i, sc, out);
+        }
+        out.close();
+    }
+    private static class Solution {
+        public void solveTestcase(int testNumber, InputReader sc, OutputWriter out) {
+            //out.print("Case #" + testNumber + " :");
+            int n = sc.nextInt();
+            int[] ar = new int[n];
+            for(int i = 0; i < n; i++){
+                ar[i] = sc.nextInt();
+            }
+            Arrays.sort(ar);
+            int max = 1, res = ar[0];
+            int count = 1;
+            int k=0;
+ 
+            for (int i = 1; i < n; i++) {
+                if (ar[i] == ar[i - 1])
+                    count++;
+                else
+                    count = 1;
+    
+                if (count >= max) {
+                    if(count>max)
+                    {
+                        max = count;
+                        res = ar[i - 1];
+                        k=0;
+                    }
+                    else
+                        k++;
+                }
+            }
+            if(k == 0)
+                System.out.println(res);
+            else
+                System.out.println("CONFUSED");
+        }
+    }
+}
+
+class InputReader {
+    private static final int Buffer_Size = 1<<10;
+
+    private InputStream stream;
+    private byte[] Buffer = new byte[Buffer_Size];
+    private int currChar;
+    private int NumChars;
+
+    public InputReader(InputStream stream) {
+        this.stream = stream;
+    }
+
+    public int[] nextInts(int n) {
+        int[] Intaray = new int[n];
+        for (int i = 0; i < n; i++) {
+            Intaray[i] = nextInt();
+        }
+        return Intaray;
+    }
+
+    public int[][] nextIntMatrix(int n, int m) {
+        int[][] IntMatrix = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                IntMatrix[i][j] = nextInt();
+            }
+        }
+        return IntMatrix;
+    }
+
+    public long[] nextLongs(int n) {
+        long[] Longaray = new long[n];
+        for (int i = 0; i < n; i++) {
+            Longaray[i] = nextLong();
+        }
+        return Longaray;
+    }
+
+    public long[][] nextLongMatrix(int n, int m) {
+        long[][] LongMatrix = new long[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                LongMatrix[i][j] = nextLong();
+            }
+        }
+        return LongMatrix;
+    }
+
+    public double[] nextDoubles(int n) {
+        double[] Doublearay = new double[n];
+        for (int i = 0; i < n; i++) {
+            Doublearay[i] = nextDouble();
+        }
+        return Doublearay;
+    }
+
+    public double[][] nextDoubleMatrix(int n, int m) {
+        double[][] DoubleMatrix = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                DoubleMatrix[i][j] = nextLong();
+            }
+        }
+        return DoubleMatrix;
+    }
+
+    public int next() {
+        if (NumChars == -1) {
+            throw new InputMismatchException();
+        }
+        if (currChar >= NumChars) {
+            currChar = 0;
+            try {
+                NumChars = stream.read(Buffer);
+            } catch (IOException e) {
+                throw new InputMismatchException();
+            }
+            if (NumChars <= 0)
+                return -1;
+        }
+        return Buffer[currChar++];
+    }
+
+    public char nextChar() {
+        int c = next();
+        while (isSpaceChar(c)) {
+            c = next();
+        }
+        if ('a' <= c && c <= 'z') {
+            return (char) c;
+        }
+        if ('A' <= c && c <= 'Z') {
+            return (char) c;
+        }
+        throw new InputMismatchException();
+    }
+
+    public String nextLine() {
+        int c = next();
+        while (isSpaceChar(c)) {
+            c = next();
+        }
+        StringBuilder ans = new StringBuilder();
+        do {
+            ans.append((char) c);
+            c = next();
+        } while (!isSpaceChar(c));
+        return ans.toString();
+    }
+
+    public int nextInt() {
+        int c = skipWhileSpace();
+        int Sign = 1;
+        if (c == '-') {
+            Sign = -1;
+            c = next();
+        }
+        int ans = 0;
+        do {
+            if (c < '0' || c > '9') {
+                throw new InputMismatchException();
+            }
+            ans *= 10;
+            ans += c-'0';
+            c = next();
+        } while (!isSpaceChar(c));
+        return ans*Sign;
+    }
+
+    public long nextLong() {
+        int c = skipWhileSpace();
+        long Sign = 1;
+        if (c == '-') {
+            Sign = -1;
+            c = next();
+        }
+        long ans = 0;
+        do {
+            if (c < '0' || c > '9') {
+                throw new InputMismatchException();
+            }
+            ans *= 10;
+            ans += c - '0';
+            c = next();
+        } while (!isSpaceChar(c));
+        return ans * Sign;
+    }
+    
+    public double nextDouble() {
+        return Double.valueOf(nextLine());
+    }
+
+    public int skipWhileSpace() {
+        int c = next();
+        while (isSpaceChar(c)) {
+            c = next();
+        }
+        return c;
+    }
+
+    public boolean isSpaceChar(int c) {
+        return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
+    }
+}
+
+class OutputWriter {
+    private final PrintWriter output;
+
+    public OutputWriter(OutputStream outputStream) {
+        output = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
+    }
+
+    public OutputWriter(Writer output) {
+        this.output = new PrintWriter(output);
+    }
+
+    public void print(Object... objects) {
+        for (int i = 0; i < objects.length; i++) {
+            if (i != 0)
+                output.print(' ');
+            output.print(objects[i]);
+        }
+    }
+
+    public void println(Object... objects) {
+        print(objects);
+        output.println();
+    }
+
+    public void close() {
+        output.close();
+    }
+
+    public void flush() {
+        output.flush();
+    }
+}
