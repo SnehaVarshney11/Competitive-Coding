@@ -1,4 +1,4 @@
-package Practice;
+package codechef.Practice;
 import java.util.Scanner;
 
 class Check_Mate{
