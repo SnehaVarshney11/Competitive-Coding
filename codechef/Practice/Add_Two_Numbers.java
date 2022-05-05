@@ -1,4 +1,5 @@
-package Practice;
+package codechef.Practice;
+
 import java.util.Scanner;
 
 class Add_Two_Numbers{
