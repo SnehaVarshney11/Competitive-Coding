@@ -1,4 +1,4 @@
-package Practice;
+package codechef.Practice;
 import java.util.Scanner;
 
 class Lucky_Four{
