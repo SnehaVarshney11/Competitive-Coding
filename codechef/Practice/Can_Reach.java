@@ -1,4 +1,4 @@
-package Practice;
+package codechef.Practice;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
