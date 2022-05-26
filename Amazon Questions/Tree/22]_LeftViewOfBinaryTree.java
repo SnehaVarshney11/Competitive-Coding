@@ -1,26 +1,29 @@
-package Amazon Questions.Tree;
+import java.util.ArrayList;
 
+class Node
+{
+    int data;
+    Node left, right;
+
+    Node(int item)
+    {
+        data = item;
+        left = right = null;
+    }
+}
 class LeftViewOfBinaryTree {
     ArrayList<Integer> leftView(Node root)
     {
       // Your code here
       ArrayList<Integer> al = new ArrayList<>();
-      solve(root, al);
+      leftV(root, al, 0);
       return al;
     }
-    public void solve(Node root, ArrayList<Integer> al){
-        Queue<Node> q = new LinkedList<>();
+    public void leftV(Node root, ArrayList<Integer> al, int level){
         if(root == null) return;
-        q.add(root);
-        while(!q.isEmpty()){
-            int size = q.size();
-            for(int i = 1; i <= size; i++){
-                Node tmp = q.poll();
-                if(i == 1) al.add(tmp.data);
-                
-                if(tmp.left != null) q.add(tmp.left);
-                if(tmp.right != null) q.add(tmp.right);
-            }
-        }
+        if(al.size() == level)
+            al.add(root.data);
+        leftV(root.left, al, level+1);
+        leftV(root.right, al, level+1);
     }
 }
