@@ -1,42 +1,31 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.List;
 
-class Node
-{
-    int data;
-    Node left, right;
-    public Node(int data)
-    {
-        this.data = data;
-         left = right = null;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
-class RightView{
-    //Function to return list containing elements of right view of binary tree.
-    ArrayList<Integer> rightView(Node node) {
-        //add code here.
-        ArrayList<Integer> al = new ArrayList<>();
-        if(node == null){
-            return al;
-        }
-        Queue<Node> q = new LinkedList<>();
-        q.offer(node);
-        while(!q.isEmpty()){
-            int size = q.size();
-            for(int i = 0; i < size; i++){
-                Node cur = q.poll();
-                if(i == size-1){
-                    al.add(cur.data);
-                }
-                if(cur.left != null){
-                    q.offer(cur.left);
-                }
-                if(cur.right != null){
-                    q.offer(cur.right);
-                }
-            }
-        }
-        return al;
+
+class Solution {
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        rightView(root, list, 0); //root, list, level
+        return list;
     }
+    public void rightView(TreeNode root, List<Integer> list, int level){
+        if(root == null) return;
+        if(list.size() == level){
+            list.add(root.val);
+        }
+        rightView(root.right, list, level+1);
+        rightView(root.left, list, level+1);
+    }   
 }
