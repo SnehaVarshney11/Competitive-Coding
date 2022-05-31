@@ -1,3 +1,7 @@
+package Leetcode.MayDailyQues;
+
+import java.util.HashSet;
+
 class Solution {
     public boolean hasAllCodes(String s, int k) {
         var hs = new HashSet<String>();
