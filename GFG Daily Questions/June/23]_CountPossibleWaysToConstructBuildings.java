@@ -7,7 +7,7 @@ class CountPossibleWaysToConstructBuildings {
        long b = 1;
        long c = 0;
        
-       for(int i=0;i<N;i++){
+       for(int i = 0; i < N; i++){
            c = (a + b)%1000000007;
            a = b%1000000007;
            b = c%1000000007;
