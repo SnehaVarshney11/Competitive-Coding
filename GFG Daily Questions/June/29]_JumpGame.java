@@ -5,6 +5,7 @@ class JumpGame{
         // code here
         int left = N-2;
         int right = N-1;
+        
         while(left>=0&&right>=0) {
             if(right-left<=A[left]) {
                 right = left;
