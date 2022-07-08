@@ -36,7 +36,6 @@ class BracketsInMatrixChainMultiplication {
             }
             
         }
-        
         return dp[i][j] = new Pair(output, min_steps);
     }
     
