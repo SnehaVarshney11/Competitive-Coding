@@ -2,7 +2,6 @@ package CodeForces.Problems.A;
 
 import java.io.*;
 import java.util.*;
-import java.math.*;
 
 // solution --> @varSneha
 
