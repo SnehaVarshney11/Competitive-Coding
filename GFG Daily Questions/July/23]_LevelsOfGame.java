@@ -23,6 +23,7 @@ class LevelsOfGame {
         int[][] dp = new int[2001][2001];
         for(int[] d : dp)
             Arrays.fill(d, -1);
+        
         return maxLevel_dp(h, m, dp, true);
     }
 }
