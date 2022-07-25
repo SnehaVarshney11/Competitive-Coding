@@ -11,6 +11,7 @@ class CountBSTNodesthatLieInAGivenRange {
         if(root == null){
             return 0;
         }
+        
         int left = getCount(root.left, l, h);
         int right = getCount(root.right, l, h);
         
