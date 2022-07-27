@@ -14,6 +14,6 @@ class MaximumSumLeafToRootPath {
         int left = maxPathSum(root.left);
         int right = maxPathSum(root.right);
         int s = Math.max(left,right);
-       return s+root.data;
+        return s+root.data;
     }
 }
