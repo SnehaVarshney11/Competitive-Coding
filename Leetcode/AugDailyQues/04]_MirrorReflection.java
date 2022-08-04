@@ -1,4 +1,4 @@
-package August;
+package Leetcode.AugDailyQues;
 
 class MirrorReflection {
     public int mirrorReflection(int p, int q) {
