@@ -28,6 +28,7 @@ class LexicographicallySmallestString {
                 }
             }
         }
+        
         char[] ans = new char[left];
         int i = left - 1;
         while(!ad.isEmpty()) {
