@@ -1,8 +1,15 @@
+package Leetcode.OctDailyQues;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+
 class TopKFrequentWords{
     public List<String> topKFrequent(String[] words, int k) {
-        
-        // map hold the word: counts
-        HashMap<String, Integer> map = new HashMap();
+        HashMap<String, Integer> map = new HashMap<>();
         
         // sort the map by frequency high->low order, sort words lexi order
         PriorityQueue<Map.Entry<String, Integer>> heap = new PriorityQueue<>(
@@ -26,7 +33,7 @@ class TopKFrequentWords{
         }
         
         // pop out the answer
-        List<String> ans = new ArrayList();
+        List<String> ans = new ArrayList<>();
         while(heap.size() > 0)
             ans.add(heap.poll().getKey());
         
