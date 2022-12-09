@@ -2,6 +2,10 @@ package Leetcode.DecDaily;
 
 import java.util.ArrayList;
 
+class TreeNode{
+    TreeNode left, right;
+    int val;
+}
 class LeafSimilarTrees {
     ArrayList<Integer> leaf1 = new ArrayList<>();
         ArrayList<Integer> leaf2 = new ArrayList<>();
