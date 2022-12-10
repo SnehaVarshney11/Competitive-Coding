@@ -1,5 +1,9 @@
 package Leetcode.DecDaily;
 
+class TreeNode{
+    TreeNode left, right;
+    int val;
+}
 class MaxDiffBetweenNodeAndAncestor {
     public int maxAncestorDiff(TreeNode root, int ancestor_min, int ancestor_max) {
         if (root != null) 
