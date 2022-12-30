@@ -50,6 +50,5 @@ class UniquePaths {
         zero++;
 
         return totalCount;
-
     }
 }
