@@ -3,28 +3,21 @@ package Leetcode.DecDaily;
 class UniquePaths {
     public int uniquePathsIII(int[][] grid) {
 
-        int zero = 0 , a = 0, b = 0 ;
-
-        for(int r = 0; r < grid.length ; r++){
-
-            for(int c = 0; c < grid[0].length; c++){
-
-                if(grid[r][c] == 0)   zero++;
-
-                   else if(grid[r][c] == 1){
-
-                    a = r;
-
-                    b = c;
+    int zero = 0 , a = 0, b = 0 ;
+    
+    for(int r = 0; r < grid.length ; r++){
+        for(int c = 0; c < grid[0].length; c++){
+            if(grid[r][c] == 0)   zero++;
+               else if(grid[r][c] == 1){
+                a = r;
+                b = c;
 
                 }
 
             }
 
         }
-
         return path(grid, a, b, zero);
-
     }
 
     private int path(int[][] grid, int x, int y, int zero){
