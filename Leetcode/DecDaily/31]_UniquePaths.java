@@ -4,7 +4,7 @@ class UniquePaths {
     public int uniquePathsIII(int[][] grid) {
 
     int zero = 0 , a = 0, b = 0 ;
-    
+
     for(int r = 0; r < grid.length ; r++){
         for(int c = 0; c < grid[0].length; c++){
             if(grid[r][c] == 0)   zero++;
@@ -39,7 +39,6 @@ class UniquePaths {
                          path(grid, x - 1, y, zero) + path(grid, x, y - 1, zero);
 
         grid[x][y] = 0;
-
         zero++;
 
         return totalCount;
