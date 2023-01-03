@@ -16,6 +16,5 @@ class MiddleOfLinkedList {
             b = b.next.next;
         }
         return a; 
-        
     }
 }
