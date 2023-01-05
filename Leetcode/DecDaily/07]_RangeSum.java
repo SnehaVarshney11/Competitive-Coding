@@ -20,6 +20,7 @@ class RangeSum {
                 return rangeSumBST(root.left, low, high);
             if(root.val < low)
                 return rangeSumBST(root.right, low, high);
+                
             return root.val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
         }
 }
