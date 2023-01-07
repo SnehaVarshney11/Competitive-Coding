@@ -20,8 +20,6 @@ class SortCharacters {
 
                 .forEach(entry -> sb.append(String.valueOf(entry.getKey()).repeat(entry.getValue())));
 
-            
-
         return sb.toString();
     }
 }
