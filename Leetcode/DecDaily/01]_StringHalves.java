@@ -13,7 +13,6 @@ class StringHalves {
             if (set.contains(charA)) cnt++;
             if (set.contains(charB)) cnt--;
         }
-        
         return cnt == 0;
     }
 }
