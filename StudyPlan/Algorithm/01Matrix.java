@@ -15,7 +15,7 @@ class Matrix {
             }
         }
         
-    int[][] dirs = {{0,1}, {-1,0}, {1,0}, {0,-1}};
+int[][] dirs = {{0,1}, {-1,0}, {1,0}, {0,-1}};
         int len = 0;
         while(!q.isEmpty()){
             int size = q.size();
