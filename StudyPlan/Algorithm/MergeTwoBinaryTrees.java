@@ -9,6 +9,7 @@ class TreeNode{
         left = right = null;
     }
 }
+
 public class MergeTwoBinaryTrees {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
         return merge(root1, root2);
