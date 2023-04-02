@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
