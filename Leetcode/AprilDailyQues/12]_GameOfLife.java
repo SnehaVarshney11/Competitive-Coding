@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 class GameOfLife {
     public void gameOfLife(int[][] board) {
