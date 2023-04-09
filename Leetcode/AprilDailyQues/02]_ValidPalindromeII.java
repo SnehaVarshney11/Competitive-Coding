@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 class ValidPalindromeII {
     public boolean isPalindrome(String s, int i, int j){
