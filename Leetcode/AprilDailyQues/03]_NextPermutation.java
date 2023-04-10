@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 class NextPermutation{
     public void nextPermutation(int[] nums) {
