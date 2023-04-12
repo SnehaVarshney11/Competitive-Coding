@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 class ContainerWithMostWater {
     public int maxArea(int[] height) {
