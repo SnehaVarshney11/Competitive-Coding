@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
