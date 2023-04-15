@@ -1,4 +1,4 @@
-package AprilDailyQues;
+package Leetcode.AprilDailyQues;
 
 import java.util.ArrayList;
 import java.util.HashMap;
