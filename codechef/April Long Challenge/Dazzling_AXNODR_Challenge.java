@@ -31,7 +31,6 @@ class Dazzling_AXNODR_Challenge{
 
     }
 }
-
 class InputReader {
     private static final int Buffer_Size = 1<<10;
 
