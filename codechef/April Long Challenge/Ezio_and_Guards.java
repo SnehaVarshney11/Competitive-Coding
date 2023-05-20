@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // solution --> @varsneha
-h
+
 class Ezio_and_Guards{
     public static void main(String[] args) throws Exception {
         InputReader sc = new InputReader(System.in);
