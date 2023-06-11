@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // solution --> @varsneha
- lhiuohouhouhuooooooooooooooo
+ lhiuohouhouhuoooooooooooooo
 class The_Cooler_Dilemma_1{
     public static void main(String[] args) throws Exception {
         InputReader sc = new InputReader(System.in);
