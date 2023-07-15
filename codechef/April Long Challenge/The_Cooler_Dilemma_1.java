@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+ 
 // solution --> @varsneha 
  
 class The_Cooler_Dilemma_1{
